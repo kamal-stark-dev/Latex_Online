@@ -9,3 +9,15 @@ document.getElementById("latexInput").addEventListener("input", function () {
     output.textContent = e.message;
   }
 });
+
+document
+  .getElementById("downloadButton")
+  .addEventListener("click", function () {
+    var output = document.getElementById("output");
+    html2canvas(output).then((canvas) => {
+      var link = document.createElement("a");
+      link.href = canvas.toDataURL("image/png");
+      link.download = "latex_output.png";
+      link.click();
+    });
+  });

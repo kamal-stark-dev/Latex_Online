@@ -1,14 +1,32 @@
-document.getElementById("latexInput").addEventListener("input", function () {
-  var input = this.value;
+function renderLaTeX() {
+  var input = document.getElementById("latexInput").value;
   var output = document.getElementById("output");
   try {
+    // Default display mode to true
+    var displayMode = true;
+
+    // Check if input is wrapped with $
+    if (
+      input.startsWith("$") &&
+      input.endsWith("$") &&
+      !(input.startsWith("$$") && input.endsWith("$$"))
+    ) {
+      displayMode = false;
+      input = input.slice(1, -1); // Remove the $ delimiters
+    } else if (input.startsWith("$$") && input.endsWith("$$")) {
+      input = input.slice(2, -2); // Remove the $$ delimiters
+    }
+
     katex.render(input, output, {
       throwOnError: false,
+      displayMode: displayMode,
     });
   } catch (e) {
     output.textContent = e.message;
   }
-});
+}
+
+document.getElementById("latexInput").addEventListener("input", renderLaTeX);
 
 document
   .getElementById("downloadButton")

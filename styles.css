@@ -6,23 +6,27 @@ body {
   height: 100vh;
   margin: 0;
   flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
 }
 textarea {
-  width: 50%;
+  width: 60%;
   height: 100px;
   margin-bottom: 20px;
   padding: 10px;
   font-size: 16px;
 }
 #output {
-  width: 50%;
-  min-height: 50px;
-  padding: 10px;
+  width: 60%;
+  min-height: 80px;
+  max-height: 360px; /* Set a maximum height for the output area */
+  overflow: auto; /* Enable scrolling if the content exceeds the maximum height */
   margin-bottom: 20px;
+  padding: 10px;
   border: 1px solid #ccc;
-  color: black;
+  background-color: #f9f9f9;
+  white-space: pre-wrap; /* Ensure long lines wrap properly */
 }
-
 #downloadButton {
   padding: 10px 20px;
   font-size: 16px;

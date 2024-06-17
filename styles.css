@@ -19,13 +19,13 @@ textarea {
 #output {
   width: 60%;
   min-height: 54px;
-  max-height: 360px; /* Set a maximum height for the output area */
-  overflow: auto; /* Enable scrolling if the content exceeds the maximum height */
+  max-height: 360px;
+  overflow: auto;
   margin-bottom: 20px;
   padding: 10px;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
-  white-space: pre-wrap; /* Ensure long lines wrap properly */
+  white-space: pre-wrap;
 }
 #downloadButton {
   padding: 10px 20px;

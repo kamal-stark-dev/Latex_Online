@@ -1,25 +1,56 @@
+/* * {
+  border: 2px red solid;
+} */
+
 body {
   font-family: Arial, sans-serif;
+  height: 100vh;
+  margin: 8px 42px;
+  box-sizing: border-box;
+}
+
+/* nav {
+  margin-bottom: 20px;
+} */
+nav ul li {
+  margin-right: 16px;
+}
+nav ul li:nth-last-child(1) {
+  margin-right: 0px;
+}
+
+/* Main Logo */
+#main-logo {
+  width: 136px;
+}
+
+.main-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
   flex-direction: column;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 18px;
 }
+
 textarea {
+  min-width: 30%;
+  max-width: 90%;
   width: 60%;
-  height: 100px;
+  min-height: 60px;
+  max-height: 320px;
+  height: 120px;
   margin-bottom: 20px;
   padding: 10px;
   font-size: 16px;
 }
 #output {
+  min-width: 20%;
+  max-width: 90%;
   width: 60%;
-  min-height: 54px;
-  max-height: 360px;
+  min-height: 60px;
+  max-height: 320px;
+  height: 120px;
+  resize: both;
   overflow: auto;
   margin-bottom: 20px;
   padding: 10px;
@@ -31,4 +62,28 @@ textarea {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+
+/* Something similar to tailwind */
+.flex-it {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.rm-list-style {
+  list-style-type: none;
+  padding: 0;
 }

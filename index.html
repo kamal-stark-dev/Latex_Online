@@ -12,9 +12,34 @@
   </head>
 
   <body>
-    <textarea id="latexInput" placeholder="Enter LaTeX code here..."></textarea>
-    <div id="output"></div>
-    <button id="downloadButton">Download as Image</button>
+    <nav class="flex-it justify-space-between">
+      <div class="left">
+        <a href="#"
+          ><img
+            src="./assets/logo/Latex Pro Logo-Black-V2.png"
+            alt="Latex Pro Logo"
+            id="main-logo"
+        /></a>
+      </div>
+      <div class="right">
+        <ul class="flex-it rm-list-style">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Guide</a></li>
+          <li><a href="#">Ai Generation</a></li>
+          <li><a href="#">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+    <hr />
+
+    <div class="main-container">
+      <textarea
+        id="latexInput"
+        placeholder="Enter LaTeX code here..."
+      ></textarea>
+      <div id="output"></div>
+      <button id="downloadButton">Download as Image</button>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js"></script>
